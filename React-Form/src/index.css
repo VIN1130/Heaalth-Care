@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  overflow: hidden; /* Prevents body from scrolling */
+}
+
+.container {
+  width: 80vw; /* Makes the form container wider */
+  height: 60vh; /* Adjusted height for scrolling */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between; /* Aligns items with space between them */
+}
+
+.form-group {
+  flex: 1; /* Equal width for each form group */
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  width: 95%;
+  padding: 16px; /* Added padding */
+  box-sizing: border-box;
+}
+
+button {
+  padding: 16px; /* Added padding */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
