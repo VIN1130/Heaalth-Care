@@ -1,35 +1,27 @@
 .container {
-    width: 80vw;
-    max-width: 600px; /* Adjust as needed */
-    margin: 0 auto; /* Center align */
+    margin: 0 auto;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
   }
   
   .form-group {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
   }
   
-  input,
-  select,
-  button {
-    width: 100%;
+  .input-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .grid-item {
+    border: 1px solid #ccc;
     padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 8px;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: white;
-    border: none;
     border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
   }
   

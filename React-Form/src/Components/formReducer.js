@@ -1,9 +1,9 @@
-// formReducer.js
-
 export const initialState = {
     page: 1,
     formData: {
-      name: '',
+      firstName: '',
+      middleName: '',
+      surname: '',
       birthday: '',
       address: '',
       email: '',
@@ -16,8 +16,9 @@ export const initialState = {
       howOftenSmoke: '',
       bloodType: '',
       previousConditions: '',
-      familyMembers: [{ name: '', relationship: '', age: '' }],
+      familyMembers: [{ firstName: '', middleName: '', surname: '', relationship: '', age: '', cellphone: '', gender: '' }],
     },
+    isSubmitted: false,
   };
   
   export const actionTypes = {
@@ -27,6 +28,7 @@ export const initialState = {
     ADD_FAMILY_MEMBER: 'ADD_FAMILY_MEMBER',
     UPDATE_FAMILY_MEMBER: 'UPDATE_FAMILY_MEMBER',
     REMOVE_FAMILY_MEMBER: 'REMOVE_FAMILY_MEMBER',
+    SUBMIT_FORM: 'SUBMIT_FORM',
   };
   
   export const formReducer = (state, action) => {
@@ -48,7 +50,7 @@ export const initialState = {
           ...state,
           formData: {
             ...state.formData,
-            familyMembers: [...state.formData.familyMembers, { name: '', relationship: '', age: '' }],
+            familyMembers: [...state.formData.familyMembers, { firstName: '', middleName: '', surname: '', relationship: '', age: '', cellphone: '', gender: '' }],
           },
         };
       case actionTypes.UPDATE_FAMILY_MEMBER:
@@ -66,6 +68,12 @@ export const initialState = {
         return {
           ...state,
           formData: { ...state.formData, familyMembers: filteredFamilyMembers },
+        };
+      case actionTypes.SUBMIT_FORM:
+        return {
+          ...state,
+          isSubmitted: true,
+          page: 4,
         };
       default:
         return state;
